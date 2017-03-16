@@ -1,0 +1,495 @@
+/* CSS placed here will be applied to all skins */
+
+.collapseButton {		/* 'show'/'hide' buttons created dynamically by the        */
+	float: right;		/* CollapsibleTables JavaScript in [[MediaWiki:Common.js]] */
+	font-weight: normal;	/* are styled here so they can be customised.              */
+	text-align: right;
+	width: auto;
+}
+
+/* CSS placed below this line will be applied only for the UniWiki Tools Template:Tooltip */
+
+.uniwiki-tooltip {
+	position: relative;
+	display: inline;
+}
+
+.uniwiki-tooltip-frame {
+ 	background-color: black;
+  border: 1px solid #111111;
+  display: none;
+	min-width: 270px;
+  padding: 5px;
+	z-index: 100;
+}
+
+/* CSS placed below this line will be applied only for the UniWiki Ship Database articles */
+
+#ship-article {
+  background-color: #111111;
+  color: #CCCCCC;
+  font-family: sans-serif;
+  font-size: 12.8px;
+  h2 {
+    border: medium none;
+    color: #555555;
+    font-family: trebuchet MS;
+    font-size: 14px;
+    font-variant: smallcaps:
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    .mw-headline {
+      color: #656565;
+      display: inline-block;
+      font-size: 16px;
+      padding: 0 5px;
+    }
+  } .header {
+    height: 50px;
+    padding: 0 10px;
+    position: relative;
+    .mask {
+      background-color: transparent;
+      height: 50px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 605px;
+    } .headerbg {
+      margin-left: -10px;
+      text-align: left;
+      width: 605px;
+    } .dbtitle {
+      color: #C1B193;
+      font-family: trebuchet MS;
+      font-size: 11px;
+      font-variant: small-caps;
+      font-weight: normal;
+      line-height: 15px;
+      margin-left: -3px;
+      position: absolute;
+      top: 0;
+    } .shipname {
+      font-family: trebuchet MS;
+      font-size: 30px;
+      font-variant: small-caps;
+      font-weight: bold;
+      line-height: 30px;
+      margin-left: -5px;
+      position: absolute;
+      top: 17px;
+    }
+  } .toc {
+    border: 1px solid #272727;
+    float: right;
+    margin: 0 0 5px 10px;
+    width: 200px;
+    li {
+      line-height: 15px;
+      margin-bottom: 0;
+    } a {
+      color: #B89964;
+      font-size: 11px;
+      line-height: 15px;
+    }
+  } #toc {
+    border: 1px solid #272727;
+    float: right;
+    margin: 0 0 5px 10px;
+    width: 200px;
+  } .breadcrumbs {
+    background-color: black;
+    border-bottom: 1px solid #2D2413;
+    border-top: 1px solid #2D2413;
+    height: 20px;
+    margin: 0 0 15px;
+    padding-left: 3px;
+    .separator {
+      margin: 0 3px;
+    } a {
+      color: #B89964;
+      display: inline-block;
+      font-family: trebuchet MS;
+      font-size: 100%;
+      font-variant: small-caps;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 3px;
+      &:hover, &.hover {
+        background-color: #2D2413;
+        color: white;
+        text-decoration: none;
+      }
+    } strong.selflink {
+      color: #CCCCCC;
+      display: inline-block;
+      font-family: trebuchet MS;
+      font-size: 100%;
+      font-variant: small-caps;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 3px;
+      font-weight: normal;
+    }
+  } .main {
+    .left-col {
+      background-color: #222222;
+      border-color: #272727 #151515 #151515 #272727;
+      border-style: solid;
+      border-width: 2px;
+      padding: 5px;
+      width: 256px;
+    } .box-line {
+      padding: 0 10px;
+      p {
+        text-align: justify;
+      } .att-line {
+        border-bottom: 1px solid #2C2B2B;
+        padding: 3px 3px 0;
+      } .midinfo {
+        margin: 10px 0;
+        width: 510px;
+        tr, td {
+          margin: 0;
+          padding: 0;
+          vertical-align: top;
+        } small {
+          background-color: black;
+          border: 1px solid #272727;
+          color: #CCCCCC;
+          height: 15px;
+          line-height: 15px;
+          overflow: hidden;
+          padding: 0 2px;
+          position: absolute;
+          right: 0;
+          text-align: right;
+          width: 60px;
+        } .title {
+          color: #656565;
+          font-family: trebuchet MS;
+          font-size: 14px;
+          font-variant: small-caps;
+        } .left {
+          padding: 0 5px 5px 10px;
+          width: 280px;
+          ul {
+            line-height: 120%;
+            margin: 5px 0 0 1.5em;
+          } li {
+            color: #9E8F75;
+            font-family: arial;
+            font-size: 12px;
+            margin-bottom: 5px;
+            position: relative;
+          } .skillstime {
+            border: 1px solid #272727;
+            color: #656565;
+            font-family: trebuchet MS;
+            padding-left: 20px;
+            position: relative;
+            .value {
+              color: white;
+              font-size: 11px;
+              padding: 0 3px 0 2px;
+              position: absolute;
+              right: 0;
+              text-align: right;
+              top: 0;
+              width: 100px;
+            } .desc {
+              background-color: black;
+              border: 2px dashed #582806;
+              color: #CCCCCC;
+              display: none;
+              font-size: 11px;
+              left: 150px;
+              line-height: 120%;
+              padding: 5px;
+              position: absolute;
+              text-align: justify;
+              width: 200px;
+            } &:hover, &.hover {
+              .desc {
+                display: block;
+                z-index: 100;
+              }
+            }
+          }
+        } .right {
+          padding: 0 5px;
+        }
+      }
+    } .box-attributes {
+      background-color: black;
+      border: 1px solid #272727;
+      display: inline-block;
+      margin-left: 10px;
+      padding: 5px;
+    } .box-bonuses {
+      border: 1px solid #272727;
+      color: white;
+      font-size: 95%;
+      margin: 0 10px;
+      width: 490px;
+      .label {
+        background-color: #1A1A1A;
+        color: #656565;
+        font-family: trebuchet MS;
+        margin: 2px -8px;
+        padding: 0 5px;
+      }
+    } .box-info {
+      margin-top: 5px;
+      padding: 0;
+      .ecm-info {
+        background-color: transparent;
+        width: 100%;
+        tr, td {
+          line-height: 110%;
+          vertical-align: middle;
+        } .faction-img {
+          width: 50px;
+        } .faction {
+          color: white;
+          font-family: helvetica;
+          font-size: 100%;
+          font-variant: small-caps;
+          font-weight: bold;
+          height: 25px;
+          padding-bottom: 2px;
+          text-align: center;
+          vertical-align: bottom;
+        } .ecm-priority {
+          background-color: #222222;
+          border: 1px solid #323931;
+          padding: 2px;
+          position: relative:
+          width: 70px;
+          &:hover, &.hover {
+            .ecm-desc {
+              display: block;
+              z-index: 100;
+            }
+          } .ecm-desc {
+            background-color: black;
+            border: 2px dashed #582806;
+            display: none;
+            font-size: 11px;
+            let: 75px;
+            padding: 5px;
+            position: absolute;
+            top: -1px;
+            width: 300px;
+            z-index: 100;
+            p {
+              font-family: arial;
+              line-height: 120%;
+              margin: 0;
+              padding: 0;
+              text-align: justify;
+            } .innervalue {
+              font-weight: bold;
+            }
+          } .label {
+            font-family: trebuchet MS;
+            font-size: 10px;
+            font-variant: small-caps;
+            line-height: 100%;
+            padding: 3px;
+            text-align: center;
+          } .label2 {
+            background-color: black;
+            font-family: trebuchet MS;
+            font-size: 10px;
+            margin-bottom: 2px;
+            padding-bottom: 3px;
+            text-align: center;
+            text-transform: uppercase;
+          } .value {
+            background-color: black;
+            font-family: trebuchet MS;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 15px;
+            overflow: hidden;
+            padding: 3px 0 0;
+            text-align: center;
+          } .snip {
+            color: #656565;
+            font-size: 70%;
+            line-height: 100%;
+            text-align: right;
+          } .none {
+            color: gray;
+          } .low {
+            color: #9C6825;
+          } .normal {
+            color: #CCCCCC;
+          } .high {
+            color: yellow:
+          } .veryhigh {
+            color: red;
+          }
+        }
+      } .hull-type {
+        height: 20px;
+        padding: 0 5px;
+        text-align: center;
+        a {
+          color: orange;
+          font-family: trebuchet MS;
+          font-size: 120%;
+          text-transform: uppercase;
+        }
+      } .hull-title {
+        font-family: trebuchet MS;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: top;
+      } .type-gravimetric {
+        color: #B2C4DA;
+      } .type-magnetometric {
+        color: #5AD3C9;
+      } .type-ladar {
+        color: #CC5B56;
+      } .type-radar {
+        color: #DCC69B;
+      }
+    } .box-awards {
+      margin-left: -6px;
+      margin-right: -6px;
+      padding: 10px 0 5px;
+      position: relative;
+      .award {
+        background-color: #1A1A1A;
+        border-color: #393734 black;
+        border-style: solid;
+        border-width: 1px;
+        margin-bottom: 2px;
+        padding: 2px 5px;
+        position: relative;
+        .award-img {
+          display: inline-block;
+          a {
+            display: block;
+            height: 19px;
+            line-height: 19px;
+          } img {
+            line-height: 19px;
+            margin-top: -2px;
+          }
+        }
+      } .award-label {
+        color: #B89964;
+        display: inline-block;
+        font-family: arial;
+        font-size: 12px;
+        font-variant: small-caps;
+        height: 19px;
+        left: 25px;
+        line-height: 19px;
+        position: absolute;
+        top: 2px;
+        z-index: 20;
+      } .award-bgr {
+        color: #4C4C4C;
+        float: right;
+        font-family: trebuchet MS;
+        font-size: 80%;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        z-index: 10;
+      }
+    } .box-discussion {
+      background-color: #1A1A1A;
+      border-color: #393734 black;
+      border-style: solid;
+      border-width: 1px;
+      margin-left: -6px;
+      margin-right: -6px;
+      margin-top: 5px;
+      padding: 5px;
+      .discussion-bgr {
+        color: #4C4C4C;
+        font-family: trebuchet MS;
+        font-size: 90%;
+      } .linkname {
+        font-size: 11px;
+        line-height: 120%;
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+/* CSS placed below this line will be applied only for the UniWiki Tools Template:ApplyBreadcrumbs */
+
+#apply-breadcrumbs {
+	background: url("http://wiki.eveuniversity.org/w/images/1/16/Recruitment_bg_bc_bgr.png") repeat-x scroll 0 0 transparent;
+  border: 2px solid black;
+  clear: both;
+  float: left;
+  height: 44px;
+  overflow: hidden;
+  width: 100%;
+  .unilogo {
+    background: url("http://wiki.eveuniversity.org/w/images/9/9d/Recruitment_bg_bc_unilogo.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 44px;
+    width: 66px;
+  } .items {
+    font-family: arial;
+    font-size: 18px;
+    font-variant: small-caps;
+    .token {
+      a {
+        display: block;
+        float: left;
+        &:hover, &.hover {
+          .text {
+            display: block;
+          }
+        }
+      } .number {
+        background: url("http://wiki.eveuniversity.org/w/images/6/63/Recruitment_bg_bc_separator.png") no-repeat scroll 0 0 transparent;
+        color: white;
+        display: block;
+        float: left;
+        font-family: trebuchet MS;
+        font-size: 18px;
+        height: 44px;
+        line-height: 44px;
+        padding-left: 20px;
+        padding-right: 10px;
+      } .text {
+        color: #B4B4B4;
+        display: none;
+        float: left;
+        font-size: 14px;
+        height: 44px;
+        line-height: 44px;
+        padding-right: 5px;
+      }
+    } .current {
+      .number {
+        background: url("http://wiki.eveuniversity.org/w/images/9/9d/Recruitment_bg_bc_separator_current_begin.png") no-repeat scroll 0 0 #111111;
+        color: khaki;
+      } .text {
+        background-color: #111111;
+        color: khaki;
+        display: block;
+        font-size: 18px;
+        font-variant: inherit;
+        text-transform: uppercase;
+      }
+    } .end {
+      .number {
+        background: url("http://wiki.eveuniversity.org/w/images/b/b8/Recruitment_bg_bc_separator_current_end.png") no-repeat scroll 0 0 transparent;
+      }
+    }
+  }
+}
