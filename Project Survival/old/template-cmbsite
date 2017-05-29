@@ -1,0 +1,767 @@
+<div style="float: right; margin: 0 2em 2em;">
+{{CMBSiteBox|{{{1|}}}}}
+__NOTOC__
+</div>
+{{#css:
+table.headers_left tr th {text-align: left; }
+table.complex {font-size: 0.9em; line-height: 1.1em; padding-bottom: 0;}
+table.complex caption {padding: 0.25em; text-align:left; }
+table.complex tr th {background-color: #222; padding: 0.35em;}
+table.complex tr td {padding: 0.25em; }
+table.complex tr td.icon {text-align: center; padding: 0; }
+h4, h5, h6 {line-height: 1; padding-top: 0; padding-bottom: 0;}
+
+@keyframes flashy { 50% { opacity: 0; } }
+@-webkit-keyframes flashy { 50% { opacity: 0; } }
+@-moz-keyframes flashy { 50% { opacity: 0; } }
+@-o-keyframes flashy { 50% { opacity: 0; } }
+.flashy img {
+    animation-name: flashy;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: flashy;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-name: flashy;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -o-animation-name: flashy;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: alternate;
+}
+.wikitable.NPC .head-first {min-width: 360px; }
+.wikitable.NPC .head th p {display: none; }
+.wikitable.NPC caption {text-align:left; margin-left: 0.5em; }
+.wikitable.NPC th {background-color: #222; padding: 0.5em 0.5em 0.4em; }
+.wikitable.NPC td {padding: 0.65em 0.5em 0.5em; line-height: 1; }
+.wikitable.NPC td.icon {padding: 0.1em; text-align: center; width: 24px; white-space: nowrap; }
+.wikitable.NPC td.icon a {padding: 0 0.2em; }
+.wikitable.NPC td.icon a img {margin: -6px; }
+.wikitable.NPC .mw-collapsible-toggle {position: absolute; left: 10px; }
+}}
+{{#ifeq: {{{OverviewSectionY/N}}} | Y | <br>
+== Overview {{#if: {{{Variation|}}} | (Level {{{Variation}}}) |}} ==
+{{{OverviewSectionText}}} 
+
+{{{!}} class="wikitable complex headers_left"
+{{!}}+ Site Overview 
+{{!}}- 
+! Recommended ships 
+{{!}} {{{OverviewRecShips|}}} 
+{{!}}- 
+! Payout            
+{{!}} {{{OverviewEstPayout|Unknown}}}
+{{!}}}
+
+{{#ifeq: {{{Diff&ShipRecSectionY/N}}} | Y |
+=== Difficulty & Ship Recommendation ===
+{{{Diff&ShipRecSectionText}}} 
+|}}
+
+{{#ifeq: {{{TotalExpEnemiesSectionY/N}}} | Y |
+=== Total Expected Enemies ===
+{{{TotalExpEnemiesSectionText}}}
+
+{{{!}} class="wikitable complex"
+{{!}}- 
+! Enemy Type 
+! Count
+{{!}}-     
+{{#if: {{{TotalExpFrigates|}}}       | {{!}}{{!}} {{icon|frigate|16}} Frigates            {{!}}{{!}} {{{TotalExpFrigates}}}  
+{{!}}- |}} 
+{{#if: {{{TotalExpDestroyers|}}}     | {{!}}{{!}} {{icon|destroyer|16}} Destroyer         {{!}}{{!}} {{{TotalExpDestroyers}}}
+{{!}}- |}} 
+{{#if: {{{TotalExpCruisers|}}}        | {{!}}{{!}} {{icon|cruiser|16}} Cruiser             {{!}}{{!}} {{{TotalExpCruisers}}}       
+{{!}}- |}}
+{{#if: {{{TotalExpBattlecruisers|}}} | {{!}}{{!}} {{icon|battlecruiser|16}} Battlecruiser {{!}}{{!}} {{{TotalExpBattlecruisers}}} 
+{{!}}- |}}
+{{#if: {{{TotalExpBattleships|}}}    | {{!}}{{!}} {{icon|battleship|16}} Battleship       {{!}}{{!}} {{{TotalExpBattleships}}}    
+{{!}}- |}}
+{{#if: {{{TotalExpCapitals|}}}       | {{!}}{{!}} {{icon|red capital|16}} Capital             {{!}}{{!}} {{{TotalExpCapitals}}}       
+{{!}}- |}}
+{{#if: {{{TotalExpSentries|}}}       | {{!}}{{!}} {{icon|sentry|16}} Sentry               {{!}}{{!}} {{{TotalExpSentries}}}       
+{{!}}- 
+|}} 
+{{!}}}
+|}}
+|}}
+
+{{#ifeq: {{{WalkthroughSectionY/N}}} | Y |
+== Walkthrough ==
+{{#if: {{{WarpToSitePopupText|}}} |  {{MessageBox | Upon warping to the site a popup appears saying: | {{{WarpToSitePopupText|}}} | collapsed=yes}} |<br>}}
+{{{WalkthroughSectionText|}}}<nowiki>
+
+
+
+</nowiki>{{#if: {{{Room1|}}}  | <br><br>
+=== <u>{{{Room1|}}}</u> ===
+---- {{#if: {{{Room1Image|}}} | [[image:{{{Room1Image}}}|text-top|300px|thumb|{{{Room1ImageCaption|}}}]] |}}
+{{#if: {{{Room1WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room1|}}} a popup appears saying: | {{{Room1WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room1Text|}}} | <br>{{{Room1Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group1|}}}        | | | <h4> <br><br> {{{Room1Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group1Text|}}}    | | | {{{Room1Group1Text|}}} }}
+{{#ifeq: {{{Room1Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group1Table|}}}   | | | {{{Room1Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group2|}}}        | | | <h4> <br><br> {{{Room1Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group2Text|}}}    | | | {{{Room1Group2Text|}}} }}
+{{#ifeq: {{{Room1Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group2Table|}}}   | | | {{{Room1Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group3|}}}        | | | <h4> <br><br> {{{Room1Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group3Text|}}}    | | | {{{Room1Group3Text|}}} }}
+{{#ifeq: {{{Room1Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group3Table|}}}   | | | {{{Room1Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group4|}}}        | | | <h4> <br><br> {{{Room1Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group4Text|}}}    | | | {{{Room1Group4Text|}}} }}
+{{#ifeq: {{{Room1Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group4Table|}}}   | | | {{{Room1Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group5|}}}        | | | <h4> <br><br> {{{Room1Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group5Text|}}}    | | | {{{Room1Group5Text|}}} }}
+{{#ifeq: {{{Room1Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group5Table|}}}   | | | {{{Room1Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group6|}}}        | | | <h4> <br><br> {{{Room1Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group6Text|}}}    | | | {{{Room1Group6Text|}}} }}
+{{#ifeq: {{{Room1Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group6Table|}}}   | | | {{{Room1Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group7|}}}        | | | <h4> <br><br> {{{Room1Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group7Text|}}}    | | | {{{Room1Group7Text|}}} }}
+{{#ifeq: {{{Room1Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group7Table|}}}   | | | {{{Room1Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group8|}}}        | | | <h4> <br><br> {{{Room1Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group8Text|}}}    | | | {{{Room1Group8Text|}}} }}
+{{#ifeq: {{{Room1Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group8Table|}}}   | | | {{{Room1Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group9|}}}        | | | <h4> <br><br> {{{Room1Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group9Text|}}}    | | | {{{Room1Group9Text|}}} }}
+{{#ifeq: {{{Room1Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group9Table|}}}   | | | {{{Room1Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Group10|}}}        | | | <h4> <br><br> {{{Room1Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room1Group10Text|}}}    | | | {{{Room1Group10Text|}}} }}
+{{#ifeq: {{{Room1Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room1Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room1Group10Table|}}}   | | | {{{Room1Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room1Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room1Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room2|}}}  | <br>
+=== <u>{{{Room2|}}}</u> ===
+----  {{#if: {{{Room2Image|}}} | [[image:{{{Room2Image}}}|text-top|300px|thumb|{{{Room2ImageCaption|}}}]] |}}
+{{#if: {{{Room2WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room2|}}} a popup appears saying: | {{{Room2WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room2Text|}}} | <br>{{{Room2Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group1|}}}        | | | <h4> <br><br> {{{Room2Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group1Text|}}}    | | | {{{Room2Group1Text|}}} }}
+{{#ifeq: {{{Room2Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group1Table|}}}   | | | {{{Room2Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group2|}}}        | | | <h4> <br><br> {{{Room2Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group2Text|}}}    | | | {{{Room2Group2Text|}}} }}
+{{#ifeq: {{{Room2Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group2Table|}}}   | | | {{{Room2Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group3|}}}        | | | <h4> <br><br> {{{Room2Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group3Text|}}}    | | | {{{Room2Group3Text|}}} }}
+{{#ifeq: {{{Room2Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group3Table|}}}   | | | {{{Room2Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group4|}}}        | | | <h4> <br><br> {{{Room2Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group4Text|}}}    | | | {{{Room2Group4Text|}}} }}
+{{#ifeq: {{{Room2Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group4Table|}}}   | | | {{{Room2Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group5|}}}        | | | <h4> <br><br> {{{Room2Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group5Text|}}}    | | | {{{Room2Group5Text|}}} }}
+{{#ifeq: {{{Room2Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group5Table|}}}   | | | {{{Room2Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group6|}}}        | | | <h4> <br><br> {{{Room2Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group6Text|}}}    | | | {{{Room2Group6Text|}}} }}
+{{#ifeq: {{{Room2Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group6Table|}}}   | | | {{{Room2Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group7|}}}        | | | <h4> <br><br> {{{Room2Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group7Text|}}}    | | | {{{Room2Group7Text|}}} }}
+{{#ifeq: {{{Room2Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group7Table|}}}   | | | {{{Room2Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group8|}}}        | | | <h4> <br><br> {{{Room2Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group8Text|}}}    | | | {{{Room2Group8Text|}}} }}
+{{#ifeq: {{{Room2Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group8Table|}}}   | | | {{{Room2Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group9|}}}        | | | <h4> <br><br> {{{Room2Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group9Text|}}}    | | | {{{Room2Group9Text|}}} }}
+{{#ifeq: {{{Room2Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group9Table|}}}   | | | {{{Room2Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Group10|}}}        | | | <h4> <br><br> {{{Room2Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room2Group10Text|}}}    | | | {{{Room2Group10Text|}}} }}
+{{#ifeq: {{{Room2Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room2Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room2Group10Table|}}}   | | | {{{Room2Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room2Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room2Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room3|}}}  | <br>
+=== <u>{{{Room3|}}}</u> ===
+----  {{#if: {{{Room3Image|}}} | [[image:{{{Room3Image}}}|text-top|300px|thumb|{{{Room3ImageCaption|}}}]] |}}
+{{#if: {{{Room3WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room3|}}} a popup appears saying: | {{{Room3WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room3Text|}}} | <br>{{{Room3Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group1|}}}        | | | <h4> <br><br> {{{Room3Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group1Text|}}}    | | | {{{Room3Group1Text|}}} }}
+{{#ifeq: {{{Room3Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group1Table|}}}   | | | {{{Room3Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group2|}}}        | | | <h4> <br><br> {{{Room3Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group2Text|}}}    | | | {{{Room3Group2Text|}}} }}
+{{#ifeq: {{{Room3Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group2Table|}}}   | | | {{{Room3Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group3|}}}        | | | <h4> <br><br> {{{Room3Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group3Text|}}}    | | | {{{Room3Group3Text|}}} }}
+{{#ifeq: {{{Room3Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group3Table|}}}   | | | {{{Room3Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group4|}}}        | | | <h4> <br><br> {{{Room3Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group4Text|}}}    | | | {{{Room3Group4Text|}}} }}
+{{#ifeq: {{{Room3Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group4Table|}}}   | | | {{{Room3Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group5|}}}        | | | <h4> <br><br> {{{Room3Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group5Text|}}}    | | | {{{Room3Group5Text|}}} }}
+{{#ifeq: {{{Room3Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group5Table|}}}   | | | {{{Room3Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group6|}}}        | | | <h4> <br><br> {{{Room3Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group6Text|}}}    | | | {{{Room3Group6Text|}}} }}
+{{#ifeq: {{{Room3Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group6Table|}}}   | | | {{{Room3Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group7|}}}        | | | <h4> <br><br> {{{Room3Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group7Text|}}}    | | | {{{Room3Group7Text|}}} }}
+{{#ifeq: {{{Room3Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group7Table|}}}   | | | {{{Room3Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group8|}}}        | | | <h4> <br><br> {{{Room3Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group8Text|}}}    | | | {{{Room3Group8Text|}}} }}
+{{#ifeq: {{{Room3Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group8Table|}}}   | | | {{{Room3Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group9|}}}        | | | <h4> <br><br> {{{Room3Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group9Text|}}}    | | | {{{Room3Group9Text|}}} }}
+{{#ifeq: {{{Room3Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group9Table|}}}   | | | {{{Room3Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Group10|}}}        | | | <h4> <br><br> {{{Room3Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room3Group10Text|}}}    | | | {{{Room3Group10Text|}}} }}
+{{#ifeq: {{{Room3Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room3Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room3Group10Table|}}}   | | | {{{Room3Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room3Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room3Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room4|}}}  | <br>
+=== <u>{{{Room4|}}}</u> ===
+----  {{#if: {{{Room4Image|}}} | [[image:{{{Room4Image}}}|text-top|300px|thumb|{{{Room4ImageCaption|}}}]] |}}
+{{#if: {{{Room4WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room4|}}} a popup appears saying: | {{{Room4WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room4Text|}}} | <br>{{{Room4Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group1|}}}        | | | <h4> <br><br> {{{Room4Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group1Text|}}}    | | | {{{Room4Group1Text|}}} }}
+{{#ifeq: {{{Room4Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group1Table|}}}   | | | {{{Room4Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group2|}}}        | | | <h4> <br><br> {{{Room4Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group2Text|}}}    | | | {{{Room4Group2Text|}}} }}
+{{#ifeq: {{{Room4Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group2Table|}}}   | | | {{{Room4Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group3|}}}        | | | <h4> <br><br> {{{Room4Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group3Text|}}}    | | | {{{Room4Group3Text|}}} }}
+{{#ifeq: {{{Room4Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group3Table|}}}   | | | {{{Room4Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group4|}}}        | | | <h4> <br><br> {{{Room4Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group4Text|}}}    | | | {{{Room4Group4Text|}}} }}
+{{#ifeq: {{{Room4Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group4Table|}}}   | | | {{{Room4Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group5|}}}        | | | <h4> <br><br> {{{Room4Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group5Text|}}}    | | | {{{Room4Group5Text|}}} }}
+{{#ifeq: {{{Room4Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group5Table|}}}   | | | {{{Room4Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group6|}}}        | | | <h4> <br><br> {{{Room4Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group6Text|}}}    | | | {{{Room4Group6Text|}}} }}
+{{#ifeq: {{{Room4Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group6Table|}}}   | | | {{{Room4Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group7|}}}        | | | <h4> <br><br> {{{Room4Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group7Text|}}}    | | | {{{Room4Group7Text|}}} }}
+{{#ifeq: {{{Room4Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group7Table|}}}   | | | {{{Room4Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group8|}}}        | | | <h4> <br><br> {{{Room4Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group8Text|}}}    | | | {{{Room4Group8Text|}}} }}
+{{#ifeq: {{{Room4Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group8Table|}}}   | | | {{{Room4Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group9|}}}        | | | <h4> <br><br> {{{Room4Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group9Text|}}}    | | | {{{Room4Group9Text|}}} }}
+{{#ifeq: {{{Room4Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group9Table|}}}   | | | {{{Room4Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Group10|}}}        | | | <h4> <br><br> {{{Room4Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room4Group10Text|}}}    | | | {{{Room4Group10Text|}}} }}
+{{#ifeq: {{{Room4Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room4Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room4Group10Table|}}}   | | | {{{Room4Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room4Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room4Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room5|}}}  | <br>
+=== <u>{{{Room5|}}}</u> ===
+----  {{#if: {{{Room5Image|}}} | [[image:{{{Room5Image}}}|text-top|300px|thumb|{{{Room5ImageCaption|}}}]] |}}
+{{#if: {{{Room5WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room5|}}} a popup appears saying: | {{{Room5WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room5Text|}}} | <br>{{{Room5Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group1|}}}        | | | <h4> <br><br> {{{Room5Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group1Text|}}}    | | | {{{Room5Group1Text|}}} }}
+{{#ifeq: {{{Room5Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group1Table|}}}   | | | {{{Room5Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group2|}}}        | | | <h4> <br><br> {{{Room5Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group2Text|}}}    | | | {{{Room5Group2Text|}}} }}
+{{#ifeq: {{{Room5Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group2Table|}}}   | | | {{{Room5Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group3|}}}        | | | <h4> <br><br> {{{Room5Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group3Text|}}}    | | | {{{Room5Group3Text|}}} }}
+{{#ifeq: {{{Room5Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group3Table|}}}   | | | {{{Room5Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group4|}}}        | | | <h4> <br><br> {{{Room5Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group4Text|}}}    | | | {{{Room5Group4Text|}}} }}
+{{#ifeq: {{{Room5Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group4Table|}}}   | | | {{{Room5Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group5|}}}        | | | <h4> <br><br> {{{Room5Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group5Text|}}}    | | | {{{Room5Group5Text|}}} }}
+{{#ifeq: {{{Room5Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group5Table|}}}   | | | {{{Room5Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group6|}}}        | | | <h4> <br><br> {{{Room5Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group6Text|}}}    | | | {{{Room5Group6Text|}}} }}
+{{#ifeq: {{{Room5Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group6Table|}}}   | | | {{{Room5Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group7|}}}        | | | <h4> <br><br> {{{Room5Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group7Text|}}}    | | | {{{Room5Group7Text|}}} }}
+{{#ifeq: {{{Room5Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group7Table|}}}   | | | {{{Room5Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group8|}}}        | | | <h4> <br><br> {{{Room5Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group8Text|}}}    | | | {{{Room5Group8Text|}}} }}
+{{#ifeq: {{{Room5Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group8Table|}}}   | | | {{{Room5Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group9|}}}        | | | <h4> <br><br> {{{Room5Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group9Text|}}}    | | | {{{Room5Group9Text|}}} }}
+{{#ifeq: {{{Room5Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group9Table|}}}   | | | {{{Room5Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Group10|}}}        | | | <h4> <br><br> {{{Room5Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room5Group10Text|}}}    | | | {{{Room5Group10Text|}}} }}
+{{#ifeq: {{{Room5Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room5Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room5Group10Table|}}}   | | | {{{Room5Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room5Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room5Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room6|}}}  | <br>
+=== <u>{{{Room6|}}}</u> ===
+----  {{#if: {{{Room6Image|}}} | [[image:{{{Room6Image}}}|text-top|300px|thumb|{{{Room6ImageCaption|}}}]] |}}
+{{#if: {{{Room6WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room6|}}} a popup appears saying: | {{{Room6WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room6Text|}}} | <br>{{{Room6Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group1|}}}        | | | <h4> <br><br> {{{Room6Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group1Text|}}}    | | | {{{Room6Group1Text|}}} }}
+{{#ifeq: {{{Room6Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group1Table|}}}   | | | {{{Room6Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group2|}}}        | | | <h4> <br><br> {{{Room6Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group2Text|}}}    | | | {{{Room6Group2Text|}}} }}
+{{#ifeq: {{{Room6Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group2Table|}}}   | | | {{{Room6Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group3|}}}        | | | <h4> <br><br> {{{Room6Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group3Text|}}}    | | | {{{Room6Group3Text|}}} }}
+{{#ifeq: {{{Room6Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group3Table|}}}   | | | {{{Room6Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group4|}}}        | | | <h4> <br><br> {{{Room6Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group4Text|}}}    | | | {{{Room6Group4Text|}}} }}
+{{#ifeq: {{{Room6Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group4Table|}}}   | | | {{{Room6Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group5|}}}        | | | <h4> <br><br> {{{Room6Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group5Text|}}}    | | | {{{Room6Group5Text|}}} }}
+{{#ifeq: {{{Room6Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group5Table|}}}   | | | {{{Room6Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group6|}}}        | | | <h4> <br><br> {{{Room6Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group6Text|}}}    | | | {{{Room6Group6Text|}}} }}
+{{#ifeq: {{{Room6Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group6Table|}}}   | | | {{{Room6Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group7|}}}        | | | <h4> <br><br> {{{Room6Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group7Text|}}}    | | | {{{Room6Group7Text|}}} }}
+{{#ifeq: {{{Room6Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group7Table|}}}   | | | {{{Room6Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group8|}}}        | | | <h4> <br><br> {{{Room6Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group8Text|}}}    | | | {{{Room6Group8Text|}}} }}
+{{#ifeq: {{{Room6Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group8Table|}}}   | | | {{{Room6Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group9|}}}        | | | <h4> <br><br> {{{Room6Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group9Text|}}}    | | | {{{Room6Group9Text|}}} }}
+{{#ifeq: {{{Room6Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group9Table|}}}   | | | {{{Room6Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Group10|}}}        | | | <h4> <br><br> {{{Room6Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room6Group10Text|}}}    | | | {{{Room6Group10Text|}}} }}
+{{#ifeq: {{{Room6Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room6Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room6Group10Table|}}}   | | | {{{Room6Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room6Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room6Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room7|}}}  | <br>
+=== <u>{{{Room7|}}}</u> ===
+----  {{#if: {{{Room7Image|}}} | [[image:{{{Room7Image}}}|text-top|300px|thumb|{{{Room7ImageCaption|}}}]] |}}
+{{#if: {{{Room7WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room7|}}} a popup appears saying: | {{{Room7WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room7Text|}}} | <br>{{{Room7Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group1|}}}        | | | <h4> <br><br> {{{Room7Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group1Text|}}}    | | | {{{Room7Group1Text|}}} }}
+{{#ifeq: {{{Room7Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group1Table|}}}   | | | {{{Room7Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group2|}}}        | | | <h4> <br><br> {{{Room7Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group2Text|}}}    | | | {{{Room7Group2Text|}}} }}
+{{#ifeq: {{{Room7Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group2Table|}}}   | | | {{{Room7Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group3|}}}        | | | <h4> <br><br> {{{Room7Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group3Text|}}}    | | | {{{Room7Group3Text|}}} }}
+{{#ifeq: {{{Room7Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group3Table|}}}   | | | {{{Room7Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group4|}}}        | | | <h4> <br><br> {{{Room7Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group4Text|}}}    | | | {{{Room7Group4Text|}}} }}
+{{#ifeq: {{{Room7Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group4Table|}}}   | | | {{{Room7Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group5|}}}        | | | <h4> <br><br> {{{Room7Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group5Text|}}}    | | | {{{Room7Group5Text|}}} }}
+{{#ifeq: {{{Room7Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group5Table|}}}   | | | {{{Room7Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group6|}}}        | | | <h4> <br><br> {{{Room7Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group6Text|}}}    | | | {{{Room7Group6Text|}}} }}
+{{#ifeq: {{{Room7Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group6Table|}}}   | | | {{{Room7Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group7|}}}        | | | <h4> <br><br> {{{Room7Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group7Text|}}}    | | | {{{Room7Group7Text|}}} }}
+{{#ifeq: {{{Room7Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group7Table|}}}   | | | {{{Room7Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group8|}}}        | | | <h4> <br><br> {{{Room7Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group8Text|}}}    | | | {{{Room7Group8Text|}}} }}
+{{#ifeq: {{{Room7Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group8Table|}}}   | | | {{{Room7Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group9|}}}        | | | <h4> <br><br> {{{Room7Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group9Text|}}}    | | | {{{Room7Group9Text|}}} }}
+{{#ifeq: {{{Room7Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group9Table|}}}   | | | {{{Room7Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Group10|}}}        | | | <h4> <br><br> {{{Room7Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room7Group10Text|}}}    | | | {{{Room7Group10Text|}}} }}
+{{#ifeq: {{{Room7Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room7Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room7Group10Table|}}}   | | | {{{Room7Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room7Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room7Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room8|}}}  | <br>
+=== <u>{{{Room8|}}}</u> ===
+---- {{#if: {{{Room8Image|}}} | [[image:{{{Room8Image}}}|text-top|300px|thumb|{{{Room8ImageCaption|}}}]] |}}
+{{#if: {{{Room8WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room8|}}} a popup appears saying: | {{{Room8WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room8Text|}}} | <br>{{{Room8Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group1|}}}        | | | <h4> <br><br> {{{Room8Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group1Text|}}}    | | | {{{Room8Group1Text|}}} }}
+{{#ifeq: {{{Room8Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group1Table|}}}   | | | {{{Room8Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group2|}}}        | | | <h4> <br><br> {{{Room8Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group2Text|}}}    | | | {{{Room8Group2Text|}}} }}
+{{#ifeq: {{{Room8Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group2Table|}}}   | | | {{{Room8Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group3|}}}        | | | <h4> <br><br> {{{Room8Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group3Text|}}}    | | | {{{Room8Group3Text|}}} }}
+{{#ifeq: {{{Room8Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group3Table|}}}   | | | {{{Room8Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group4|}}}        | | | <h4> <br><br> {{{Room8Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group4Text|}}}    | | | {{{Room8Group4Text|}}} }}
+{{#ifeq: {{{Room8Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group4Table|}}}   | | | {{{Room8Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group5|}}}        | | | <h4> <br><br> {{{Room8Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group5Text|}}}    | | | {{{Room8Group5Text|}}} }}
+{{#ifeq: {{{Room8Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group5Table|}}}   | | | {{{Room8Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group6|}}}        | | | <h4> <br><br> {{{Room8Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group6Text|}}}    | | | {{{Room8Group6Text|}}} }}
+{{#ifeq: {{{Room8Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group6Table|}}}   | | | {{{Room8Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group7|}}}        | | | <h4> <br><br> {{{Room8Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group7Text|}}}    | | | {{{Room8Group7Text|}}} }}
+{{#ifeq: {{{Room8Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group7Table|}}}   | | | {{{Room8Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group8|}}}        | | | <h4> <br><br> {{{Room8Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group8Text|}}}    | | | {{{Room8Group8Text|}}} }}
+{{#ifeq: {{{Room8Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group8Table|}}}   | | | {{{Room8Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group9|}}}        | | | <h4> <br><br> {{{Room8Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group9Text|}}}    | | | {{{Room8Group9Text|}}} }}
+{{#ifeq: {{{Room8Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group9Table|}}}   | | | {{{Room8Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Group10|}}}        | | | <h4> <br><br> {{{Room8Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room8Group10Text|}}}    | | | {{{Room8Group10Text|}}} }}
+{{#ifeq: {{{Room8Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room8Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room8Group10Table|}}}   | | | {{{Room8Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room8Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room8Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room9|}}}  | <br>
+=== <u>{{{Room9|}}}</u> ===
+---- {{#if: {{{Room9Image|}}} | [[image:{{{Room9Image}}}|text-top|300px|thumb|{{{Room9ImageCaption|}}}]] |}}
+{{#if: {{{Room9WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room9|}}} a popup appears saying: | {{{Room9WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room9Text|}}} | <br>{{{Room9Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group1|}}}        | | | <h4> <br><br> {{{Room9Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group1Text|}}}    | | | {{{Room9Group1Text|}}} }}
+{{#ifeq: {{{Room9Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group1Table|}}}   | | | {{{Room9Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group2|}}}        | | | <h4> <br><br> {{{Room9Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group2Text|}}}    | | | {{{Room9Group2Text|}}} }}
+{{#ifeq: {{{Room9Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group2Table|}}}   | | | {{{Room9Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group3|}}}        | | | <h4> <br><br> {{{Room9Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group3Text|}}}    | | | {{{Room9Group3Text|}}} }}
+{{#ifeq: {{{Room9Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group3Table|}}}   | | | {{{Room9Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group4|}}}        | | | <h4> <br><br> {{{Room9Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group4Text|}}}    | | | {{{Room9Group4Text|}}} }}
+{{#ifeq: {{{Room9Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group4Table|}}}   | | | {{{Room9Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group5|}}}        | | | <h4> <br><br> {{{Room9Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group5Text|}}}    | | | {{{Room9Group5Text|}}} }}
+{{#ifeq: {{{Room9Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group5Table|}}}   | | | {{{Room9Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group6|}}}        | | | <h4> <br><br> {{{Room9Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group6Text|}}}    | | | {{{Room9Group6Text|}}} }}
+{{#ifeq: {{{Room9Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group6Table|}}}   | | | {{{Room9Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group7|}}}        | | | <h4> <br><br> {{{Room9Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group7Text|}}}    | | | {{{Room9Group7Text|}}} }}
+{{#ifeq: {{{Room9Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group7Table|}}}   | | | {{{Room9Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group8|}}}        | | | <h4> <br><br> {{{Room9Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group8Text|}}}    | | | {{{Room9Group8Text|}}} }}
+{{#ifeq: {{{Room9Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group8Table|}}}   | | | {{{Room9Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group9|}}}        | | | <h4> <br><br> {{{Room9Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group9Text|}}}    | | | {{{Room9Group9Text|}}} }}
+{{#ifeq: {{{Room9Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group9Table|}}}   | | | {{{Room9Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Group10|}}}        | | | <h4> <br><br> {{{Room9Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room9Group10Text|}}}    | | | {{{Room9Group10Text|}}} }}
+{{#ifeq: {{{Room9Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room9Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room9Group10Table|}}}   | | | {{{Room9Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room9Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room9Structures|}}} |}} 
+<br clear=all> |}} <nowiki>
+
+
+
+</nowiki>{{#if: {{{Room10|}}}  | <br>
+=== <u>{{{Room10|}}}</u> ===
+---- {{#if: {{{Room10Image|}}} | [[image:{{{Room10Image}}}|text-top|300px|thumb|{{{Room10ImageCaption|}}}]] |}}
+{{#if: {{{Room10WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room10|}}} a popup appears saying: | {{{Room10WarpToPopupText|}}} | collapsed=yes}} |}} 
+{{#if: {{{Room10Text|}}} | <br>{{{Room10Text|}}} |}}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group1|}}}        | | | <h4> <br><br> {{{Room10Group1|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group1Text|}}}    | | | {{{Room10Group1Text|}}} }}
+{{#ifeq: {{{Room10Group1InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group1InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group1Table|}}}   | | | {{{Room10Group1Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group2|}}}        | | | <h4> <br><br> {{{Room10Group2|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group2Text|}}}    | | | {{{Room10Group2Text|}}} }}
+{{#ifeq: {{{Room10Group2InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group2InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group2Table|}}}   | | | {{{Room10Group2Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group3|}}}        | | | <h4> <br><br> {{{Room10Group3|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group3Text|}}}    | | | {{{Room10Group3Text|}}} }}
+{{#ifeq: {{{Room10Group3InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group3InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group3Table|}}}   | | | {{{Room10Group3Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group4|}}}        | | | <h4> <br><br> {{{Room10Group4|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group4Text|}}}    | | | {{{Room10Group4Text|}}} }}
+{{#ifeq: {{{Room10Group4InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group4InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group4Table|}}}   | | | {{{Room10Group4Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group5|}}}        | | | <h4> <br><br> {{{Room10Group5|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group5Text|}}}    | | | {{{Room10Group5Text|}}} }}
+{{#ifeq: {{{Room10Group5InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group5InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group5Table|}}}   | | | {{{Room10Group5Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group6|}}}        | | | <h4> <br><br> {{{Room10Group6|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group6Text|}}}    | | | {{{Room10Group6Text|}}} }}
+{{#ifeq: {{{Room10Group6InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group6InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group6Table|}}}   | | | {{{Room10Group6Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group7|}}}        | | | <h4> <br><br> {{{Room10Group7|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group7Text|}}}    | | | {{{Room10Group7Text|}}} }}
+{{#ifeq: {{{Room10Group7InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group7InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group7Table|}}}   | | | {{{Room10Group7Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group8|}}}        | | | <h4> <br><br> {{{Room10Group8|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group8Text|}}}    | | | {{{Room10Group8Text|}}} }}
+{{#ifeq: {{{Room10Group8InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group8InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group8Table|}}}   | | | {{{Room10Group8Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group9|}}}        | | | <h4> <br><br> {{{Room10Group9|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group9Text|}}}    | | | {{{Room10Group9Text|}}} }}
+{{#ifeq: {{{Room10Group9InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group9InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group9Table|}}}   | | | {{{Room10Group9Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Group10|}}}        | | | <h4> <br><br> {{{Room10Group10|}}} </h4> <nowiki>
+</nowiki>{{#ifeq: {{{Room10Group10Text|}}}    | | | {{{Room10Group10Text|}}} }}
+{{#ifeq: {{{Room10Group10InLocal|}}} | | | {{MessageBox | In local: | {{{Room10Group10InLocal|}}} | collapsed=yes}} }}
+{{#ifeq: {{{Room10Group10Table|}}}   | | | {{{Room10Group10Table|}}} }} }}<nowiki>
+
+</nowiki>{{#ifeq: {{{Room10Structures|}}} | | |<h4> <br><br>Structures </h4> 
+{{{Room10Structures|}}} |}}
+{{#if: {{{Room10WarpToPopupText|}}} | {{MessageBox | Upon warping to the {{{Room10|}}} a popup appears saying: | {{{Room10WarpToPopupText|}}} | collapsed=yes}} |}} 
+<br clear=all> |}}  
+
+{{#if: {{{CompletionPopupText|}}} | {{MessageBox | Upon defeating all Hostiles a popup appears saying: | {{{CompletionPopupText|}}} | collapsed=yes}} |}} 
+|}}
+
+
+{{#ifeq: {{{EscalationSectionY/N|}}} | Y |
+== Escalation ==
+This site has a {{#if: {{{EscalationChance|}}} | {{{EscalationChance|}}} |}} chance to escalate to a [[{{{Escalation|}}}]] site.
+
+{{{EscalationSectionText|}}}
+|}}
+{{#ifeq: {{{RewardsSectionY/N|}}} | Y | 
+== Rewards ==
+{{{RewardsSectionText|}}}
+
+{{{!}} class="wikitable complex collapsible"
+{{!}}+ Overview
+{{!}}-
+!
+! Est. value
+{{#if: {{{TotalBountyValue|}}} |
+{{!}}-
+! Bounties
+{{!}} {{{TotalBountyValue|}}} |}}
+{{#if: {{{TotalGeneralLootValue|}}} |  
+{{!}}-
+! General Loot
+{{!}} {{{TotalGeneralLootValue|}}} |}}
+{{#if: {{{TotalSalvageValue|}}} |
+{{!}}-
+! Salvage
+{{!}} {{{TotalSalvageValue|}}} |}}
+{{#if: {{{AverageRareLootValue|}}} | 
+{{!}}-
+! Avg. Rare Loot
+{{!}} {{{AverageRareLootValue|}}} |}}
+{{!}}}
+
+{{{ValuableLootTable|}}}
+
+{{{ExplorationLogTable|}}}
+
+{{#ifeq: {{{FactionDropLootVaryY/N|}}} | Y | Note: Loot value can vary widely, due to the majority of the value being based on random Faction/ Deadspace module or Blueprint drop.|}}
+|}}<noinclude>
+{{Documentation}}
+</noinclude>
