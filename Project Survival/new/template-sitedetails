@@ -1,0 +1,307 @@
+{| class=wikitable style="width: 250px; font-size: 0.9em; line-height: 1.4em; float: right;"
+|+ style="padding: 0.5em;" | '''Site Details '''
+|-
+| style="background: #222; text-align: center; padding: 0.5em;" colspan="2" | {{#ifeq: {{{name|}}} 
+                                                                            | {{FULLPAGENAME}}
+                                                                            | '''<big>{{{name|}}}</big>'''
+                                                                            | '''<big>{{{name|}}}</big>''' <includeonly>[[Category:Combat articles with incorrect names]]</includeonly> }}
+|-
+| style="background: #222; width: 1%; padding: 0.5em;" | '''Type'''
+| style="padding: 0.5em;"  | {{#switch: {{{sitetype}}}
+                             | DED Rated Complex = [[Combat sites#DED Rated Complexes|DED Rated Complex]]
+ {{!}}-
+ {{!}} style="background: #222; padding: 0.5em;" {{!}} '''Rating'''
+ {{!}} style="padding: 0.5em;"                   {{!}} {{{rating|none <includeonly>[[Category:Sites with no rating]]</includeonly>}}}/10
+                             | Combat Anomaly = [[Combat sites#Combat Anomalies|Combat Anomaly]]
+ {{!}}-
+ {{!}} style="background: #222; padding: 0.5em;" {{!}} '''Difficulty'''
+ {{!}} style="padding: 0.5em;"                   {{!}} {{#switch: {{{anomaly}}}
+                                                   | Hideaway = Class 1
+                                                   | Burrow = Class 2
+                                                   | Refuge = Class 3
+                                                   | Den = Class 4
+                                                   | Yard = Class 5
+                                                   | Rally Point = Class 6
+                                                   | Port = Class 7
+                                                   | Hub = Class 8
+                                                   | Haven = Class 9
+                                                   | Sanctum = Class 10
+                                                   | #default = none <includeonly>[[Category:Sites with no anomaly type]]</includeonly>
+                                                   }} {{#if: {{{variant|}}} {{#switch: {{{variant}}}
+                                                        | Hidden = Level 2
+                                                        | Forsaken = Level 3
+                                                        | Forlorn = Level 4
+                                                        | #default = none <includeonly>[[Category:Sites with incorrect variants]]</includeonly> }} }}
+                            | Unrated Complex = [[Combat sites#Unrated Complexes|Unrated Complex]]
+                            | Expedition = [[Combat sites#Expeditions|Expedition]]
+                            | Chemical Lab = [[Combat sites#Chemical Labs|Chemical Lab]]
+                            | COSMOS = [[Combat sites#COSMOS sites|COSMOS site]]
+                            | #default = none <includeonly>[[Category:Sites with no site type]]</includeonly> }}
+|-
+| style="background: #222; padding: 0.5em;" | {{#ifeq: {{{sitetype|}}} | Expedition | '''Starts in''' | '''Found in''' }}
+| style="padding: 0.5em;" | {{#if: {{{foundin|}}}
+                            | {{{foundin}}}
+                            | {{#ifeq: {{{sitetype|}}} | Chemical Lab
+                              | unknown <includeonly>[[Category:Sites with unknown region]]</includeonly>
+                              | unknown <includeonly>[[Category:Sites with unknown security status]]</includeonly> }} }}
+|-
+| style="background: #222; padding: 0.5em; white-space:nowrap" | '''Max ship size'''
+| style="padding: 0.5em;" | {{#if: {{{maxsize|}}}
+                            | {{#switch: {{{maxsize}}}
+                              | Ungated = None (ungated)
+                              | Unknown = Unknown <includeonly>[[Category:Sites with unknown max ship size]]</includeonly>
+                              | #default = {{{maxsize}}} }}
+                            | Unknown <includeonly>[[Category:Sites with unknown max ship size]]</includeonly> }}
+|-
+| style="background: #222; padding: 0.5em;white-space:nowrap" | '''Faction'''
+| style="padding: 0.5em;" | {{#if: {{{faction|}}} 
+                            | {{#ifexist: {{{faction}}}
+                              | [[{{{faction}}}]]
+                              | Unknown <includeonly>[[Category:Sites with unknown faction]]</includeonly> }}
+                            | Unknown <includeonly>[[Category:Sites with unknown faction]]</includeonly> }}
+|-
+| style="background: #222; padding: 0.5em; white-space:nowrap;" | '''[[Damage_types|Damage to deal]]'''
+| style="padding: 0.5em;" | {{#switch: {{{faction}}}
+                            | Angel Cartel = {{icon|ex resist|16|Explosive damage}} Explosive /{{icon|ki resist|16|Kinetic damage}} Kinetic
+                            | Blood Raiders = {{icon|em damage|16|EM damage}} EM /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Guristas = {{icon|ki resist|16|Kinetic damage}} Kinetic /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Sansha = {{icon|em damage|16|EM damage}} EM /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Serpentis = {{icon|ki resist|16|Kinetic damage}} Kinetic /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Rogue Drones = [[NPC damage types|Varies]]
+                            | #default = Unknown <includeonly>[[Category:Sites with unknown faction]]</includeonly> }}
+|-
+| style="background: #222; padding: 0.5em;" | '''[[Damage types|Damage to<br>resist]]'''
+| style="padding: 0.5em;" | {{#switch: {{{faction}}}
+                            | Angel Cartel = {{icon|ex resist|16|Explosive damage}} Explosive /{{icon|ki resist|16|Kinetic damage}} Kinetic
+                            | Blood Raiders = {{icon|em damage|16|EM damage}} EM /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Guristas = {{icon|ki resist|16|Kinetic damage}} Kinetic /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Sansha = {{icon|em damage|16|EM damage}} EM /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Serpentis = {{icon|ki resist|16|Kinetic damage}} Kinetic /{{icon|th damage|16|Thermal damage}} Thermal
+                            | Rogue Drones = [[NPC damage types|Varies]]
+                            | #default = Unknown <includeonly>[[Category:Sites with unknown faction]]</includeonly> }}
+|-
+| style="background: #222; padding: 0.5em;" | {{#ifeq: {{{sitetype|}}} | Expedition | '''Acquisition'''
+                                                                       | '''Signature<br>strength''' }}
+| style="padding: 0.5em;" | {{#switch: {{{name}}}
+ | Minmatar Contracted Bio-Farm                 =20% in High Sec
+ | Angel Creo-Corp Mining                       =10% in High Sec
+ | Angel Repurposed Outpost                     =10% in High Sec
+ | Angel Cartel Occupied Mining Colony          =5% in High Sec<br> 10% in Low Sec
+ | Angel's Red Light District                   =2.5% in High Sec<br> 5% in Low Sec
+ | Angel Mineral Acquisition Outpost            =2.5% in Low Sec<br> 10% in Null Sec
+ | Angel Military Operations Complex            =5% in Null Sec
+ | Cartel Prisoner Retention                    =2.5% in Null Sec
+ | Angel Cartel Naval Shipyard                  =1.25% in Null Sec
+ | Old Meanie - Cultivation Center              =20% in High Sec
+ | Blood Raider Human Farm                      =10% in High Sec
+ | Blood Raider Intelligence Collection Point   =10% in High Sec
+ | Mul-Zatah Monastery                          =5% in High Sec<br> 10% in Low Sec
+ | Blood Raider Psychotropics Depot             =2.5% in High Sec<br> 5% in Low Sec
+ | Crimson Hand Supply Depot                    =2.5% in Low Sec<br> 10% in Null Sec
+ | Blood Raider Coordination Center             =5% in Null Sec
+ | Blood Raider Prison Camp                     =2.5% in Null Sec
+ | Blood Raider Naval Shipyard                  =1.25% in Null Sec
+ | Pith Robux Asteroid Mining & Co.             =20% in High Sec
+ | Pith Deadspace Depot                         =10% in High Sec
+ | Guristas Guerilla Grounds                    =10% in High Sec
+ | Guristas Scout Outpost                       =5% in High Sec<br> 10% in Low Sec
+ | Guristas Hallucinogen Supply Waypoint        =2.5% in High Sec<br> 5% in Low Sec
+ | Guristas Troop Reinvigoration Camp           =2.5% in Low Sec<br> 10% in Null Sec
+ | Gurista Military Operations Complex          =5% in Null Sec
+ | Pith's Penal Complex                         =2.5% in Null Sec
+ | The Maze                                     =1.25% in Null Sec
+ | Sansha Military Outpost                      =20% in High Sec
+ | Sansha Acclimatization Facility              =10% in High Sec
+ | Sansha's Command Relay Outpost               =10% in High Sec
+ | Sansha's Nation Occupied Mining Colony       =5% in High Sec<br> 10% in Low Sec
+ | Sansha's Nation Neural Paralytic Facility    =2.5% in High Sec<br> 5% in Low Sec
+ | Sansha War Supply Complex                    =2.5% in Low Sec<br> 10% in Null Sec
+ | Sansha Military Operations Complex           =5% in Null Sec
+ | Sansha Prison Camp                           =2.5% in Null Sec
+ | Centus Assembly T.P. Co.                     =1.25% in Null Sec
+ | Serpentis Drug Outlet                        =20% in High Sec
+ | Serpentis Live Cargo Distribution Facilities =10% in High Sec
+ | Serpentis Narcotic Warehouses                =10% in High Sec
+ | Serpentis Phi-Outpost                        =5% in High Sec<br> 10% in Low Sec
+ | Serpentis Corporation Hydroponics Site       =2.5% in High Sec<br> 5% in Low Sec
+ | Serpentis Logistical Outpost                 =2.5% in Low Sec<br> 10% in Null Sec
+ | Serpentis Paramilitary Complex               =5% in Null Sec
+ | Serpentis Prison Camp                        =2.5% in Null Sec
+ | Serpentis Fleet Shipyard                     =1.25% in Null Sec
+ | Rogue Drone Infestation Sprout               =10% in High Sec
+ | Rogue Drone Asteroid Infestation             =10% in High Sec<br> 10% in Low Sec
+ | Outgrowth Rogue Drone Hive                   =2.5% in High Sec<br> 5% in Low Sec
+ | Angel Hideout                                =20% in High Sec
+ | Angel Lookout                                =10% in High Sec
+ | Angel Watch                                  =5% in High Sec
+ | Angel Vigil                                  =2.5% in High Sec
+ | Provisional Angel Outpost                    =20% in Low Sec
+ | Angel Outpost                                =10% in Low Sec
+ | Minor Angel Annex                            =5% in Low Sec
+ | Angel Annex                                  =2.5% in Low Sec
+ | Angel Base                                   =20% in Null Sec
+ | Angel Fortress                               =10% in Null Sec
+ | Angel Military Complex                       =5% in Null Sec
+ | Angel Provincial HQ                          =2.5% in Null Sec
+ | Angel Domination Fleet Staging Point         =1.25% in Null Sec
+ | Blood Hideout                                =20% in High Sec
+ | Blood Lookout                                =10% in High Sec
+ | Blood Watch                                  =5% in High Sec
+ | Blood Vigil                                  =2.5% in High Sec
+ | Provisional Blood Outpost                    =20% in Low Sec
+ | Blood Raider Outpost                         =10% in Low Sec
+ | Minor Blood Annex                            =5% in Low Sec
+ | Blood Raider Annex                           =2.5% in Low Sec
+ | Blood Raider Base                            =20% in Null Sec
+ | Blood Raider Fortress                        =10% in Null Sec
+ | Blood Military Complex                       =5% in Null Sec
+ | Blood Provincial HQ                          =2.5% in Null Sec
+ | Dark Blood Fleet Staging Point               =1.25% in Null Sec
+ | Gurista Hideout                              =20% in High Sec
+ | Gurista Lookout                              =10% in High Sec
+ | Gurista Watch                                =5% in High Sec
+ | Gurista Vigil                                =2.5% in High Sec
+ | Provisional Gurista Outpost                  =20% in Low Sec
+ | Gurista Outpost                              =10% in Low Sec
+ | Minor Guristas Annex                         =5% in Low Sec
+ | Guristas Annex                               =2.5% in Low Sec
+ | Gurista Base                                 =20% in Null Sec
+ | Gurista Fortress                             =10% in Null Sec
+ | Gurista Military Complex                     =5% in Null Sec
+ | Gurista Provincial HQ                        =2.5% in Null Sec
+ | Dread Guristas Fleet Staging Point           =1.25% in Null Sec
+ | Sansha Hideout                               =20% in High Sec
+ | Sansha Lookout                               =10% in High Sec
+ | Sansha Watch                                 =5% in High Sec
+ | Sansha Vigil                                 =2.5% in High Sec
+ | Provisional Sansha Outpost                   =20% in Low Sec
+ | Sansha Outpost                               =10% in Low Sec
+ | Minor Sansha Annex                           =5% in Low Sec
+ | Sansha Annex                                 =2.5% in Low Sec
+ | Sansha Base                                  =20% in Null Sec
+ | Sansha Fortress                              =10% in Null Sec
+ | Sansha Military Complex                      =5% in Null Sec
+ | Sansha Provincial HQ                         =2.5% in Null Sec
+ | True Sansha Fleet Staging Point              =1.25% in Null Sec
+ | Serpentis Hideout                            =20% in High Sec
+ | Serpentis Lookout                            =10% in High Sec
+ | Serpentis Watch                              =5% in High Sec
+ | Serpentis Vigil                              =2.5% in High Sec
+ | Provisional Serpentis Outpost                =20% in Low Sec
+ | Serpentis Outpost                            =10% in Low Sec
+ | Minor Serpentis Annex                        =5% in Low Sec
+ | Serpentis Annex                              =2.5% in Low Sec
+ | Serpentis Base                               =20% in Null Sec
+ | Serpentis Fortress                           =10% in Null Sec
+ | Serpentis Military Complex                   =5% in Null Sec
+ | Serpentis Provincial HQ                      =2.5% in Null Sec
+ | Shadow Serpentis Fleet Staging Point         =1.25% in Null Sec
+ | Haunted Yard                                 =20% in Null Sec
+ | Desolate Site                                =10% in Null Sec
+ | Chemical Yard                                =5% in Null Sec
+ | Rogue Trial Yard                             =20% in Null Sec
+ | Dirty Site                                   =10% in Null Sec
+ | Ruins                                        =5% in Null Sec
+ | Independence                                 =20% in Null Sec
+ | Radiance                                     =10% in Null Sec
+ | Hierarchy                                    =5% in Null Sec
+ | #default = {{#ifeq: {{{sitetype|}}} | Expedition 
+                                         | {{#switch: {{{name}}}
+ | Blue Pill                                    =Escalate from<br>[[Angel Hideout]]
+ | Chasing the Dragon                           =Escalate from<br>[[Angel Lookout]]
+ | The Nuclear Small Arms Project               =Escalate from<br>[[Angel Watch]]
+ | The Big Blue                                 =Escalate from<br>[[Angel Vigil]]
+ | Domination Surveillance Squad                =Escalate from<br>[[Provisional Angel Outpost]] 
+ | Salvation Angel's Shipment                   =Escalate from<br>[[Angel Outpost]]
+ | Angel Owned Station                          =Escalate from<br>[[Minor Angel Annex]] 
+ | Angel Powergrid                              =Escalate from<br>[[Angel Annex]]
+ | Toxic Waste Scandal!                         =Escalate from<br>[[Angel Base]]
+ | Operation Spring Cleaning                    =Escalate from<br>[[Angel Fortress]]
+ | Pioneers Peril                               =Escalate from<br>[[Angel Military Complex]]
+ | Special Forces                               =Escalate from<br>[[Angel Provincial HQ]]
+ | Angel Domination Fleet Staging Point 2       =Escalate from<br>[[Angel Domination Fleet Staging Point]]
+ | Frentix                                      =Escalate from<br>[[Blood Hideout]]
+ | Following the Blood                          =Escalate from<br>[[Blood Lookout]]
+ | Medical Twilight                             =Escalate from<br>[[Blood Watch]]
+ | The Rewards of Devotion                      =Escalate from<br>[[Blood Vigil]]
+ | Blood Surveillance Squad                     =Escalate from<br>[[Provisional Blood Outpost]]
+ | Save The Slaves                              =Escalate from<br>[[Blood Raider Outpost]]
+ | Blood Owned Station                          =Escalate from<br>[[Minor Blood Annex]] 
+ | Blood Raider Powergrid                       =Escalate from<br>[[Blood Annex]]
+ | Religious Fury                               =Escalate from<br>[[Blood Raider Base]]
+ | Dubious Assignment                           =Escalate from<br>[[Blood Raider Fortress]]
+ | Frontier in Flames                           =Escalate from<br>[[Blood Military Complex]]
+ | Fountain of Youth                            =Escalate from<br>[[Blood Provincial HQ]]
+ | Sooth Sayer                                  =Escalate from<br>[[Gurista Hideout]]
+ | Trap?                                        =Escalate from<br>[[Gurista Lookout]]
+ | Terrorist Plot!                              =Escalate from<br>[[Gurista Watch]]
+ | Kidnapped!                                   =Escalate from<br>[[Gurista Vigil]]
+ | Gurista Surveillance Squad                   =Escalate from<br>[[Provisional Gurista Outpost]]
+ | Gurista Productions Shipment                 =Escalate from<br>[[Gurista Outpost]]
+ | Guristas Owned Station                       =Escalate from<br>[[Minor Guristas Annex]] 
+ | Guristas Powergrid                           =Escalate from<br>[[Guristas Annex]]
+ | Consequences Smonsequences                   =Escalate from<br>[[Gurista Base]]
+ | Hired Gun                                    =Escalate from<br>[[Gurista Fortress]]
+ | Pirate's Path                                =Escalate from<br>[[Gurista Military Complex]]
+ | No Quarter                                   =Escalate from<br>[[Gurista Provincial HQ]]
+ | Drop                                         =Escalate from<br>[[Sansha Hideout]]
+ | Slave Breeding Plants                        =Escalate from<br>[[Sansha Lookout]]
+ | Nation on the Rise                           =Escalate from<br>[[Sansha Watch]]
+ | True Power Shipyards                         =Escalate from<br>[[Sansha Vigil]]
+ | Sansha Surveillance Squad                    =Escalate from<br>[[Provisional Sansha Outpost]]
+ | Hidden Riches                                =Escalate from<br>[[Sansha Outpost]]
+ | Sansha Owned Station                         =Escalate from<br>[[Minor Sansha Annex]] 
+ | Sansha Powergrid                             =Escalate from<br>[[Sansha Annex]]
+ | True Power HQ                                =Escalate from<br>[[Sansha Base]]
+ | Shady Operation                              =Escalate from<br>[[Sansha Fortress]]
+ | David V Goliath                              =Escalate from<br>[[Sansha Military Complex]]
+ | The Ancient City                             =Escalate from<br>[[Sansha Provincial HQ]]
+ | Mindflood                                    =Escalate from<br>[[Serpentis Hideout]]
+ | Angel Kickbacks                              =Escalate from<br>[[Serpentis Lookout]]
+ | Jet-Set Hooligans                            =Escalate from<br>[[Serpentis Watch]]
+ | Booster R&D                                  =Escalate from<br>[[Serpentis Vigil]]
+ | Guardian Angels Surveillance Squad           =Escalate from<br>[[Provisional Serpentis Outpost]]
+ | Elite Playground                             =Escalate from<br>[[Serpentis Outpost]]
+ | Serpentis Owned Station                      =Escalate from<br>[[Minor Serpentis Annex]] 
+ | Serpentis Powergrid                          =Escalate from<br>[[Serpentis Annex]]
+ | Contract Killers                             =Escalate from<br>[[Serpentis Base]]
+ | Shady Operation                              =Escalate from<br>[[Serpentis Fortress]]
+ | Colony Under Fire                            =Escalate from<br>[[Serpentis Military Complex]]
+ | Serpentis Secrets                            =Escalate from<br>[[Serpentis Provincial HQ]]
+ | Shadow Serpentis Fleet Staging Point 2       =Escalate from<br>[[Shadow Serpentis Fleet Staging Point]]
+ | Pulverize the Pioneers                       =Escalate from<br>[[Haunted Yard]]
+ | Mare Sargassum                               =Escalate from<br>[[Desolate Site]]
+ | Hunting the Drudge Factory                   =Escalate from<br>[[Chemical Yard]]
+ | Moving Day                                   =Escalate from<br>[[Rogue Trial Yard]]
+ | Loose Ends                                   =Escalate from<br>[[Dirty Site]]
+ | Menacing Mechanics                           =Escalate from<br>[[Ruins]]
+ | The Drone Roulette                           =Escalate from<br>[[Independence]]
+ | Molting Season                               =Escalate from<br>[[Radiance]]
+ | Trouble in Paradise                          =Escalate from<br>[[Hierarchy]]
+ | #default = <includeonly>[[Category:Expeditions with unknown source]]</includeonly> 
+    }} | {{#ifeq: {{{sitetype|}}} | Combat Anomaly | 100% ([[Scanning#Cosmic anomalies|anomaly]])
+         | {{#ifeq: {{{sitetype|}}} | Chemical Lab | Unknown <includeonly>[[Category:Chemical Labs with unknown signature strength]]</includeonly>
+           | {{#switch: {{{name}}}
+ | Nefantar Ruins                               = Beacon
+ | Contested Minmatar Legendary Stronghold      = Beacon
+ | Ketta Tommin's Residence                     = Unmarked
+ | Sispur's Estate                              = Beacon
+ | Contested Minmatar Military Depot            = Beacon
+ | Contested Minmatar Army Complex              = Beacon
+ | Contested Minmatar Guerilla Base             = Beacon
+ | Maru Prison Facility                         = Unknown <includeonly>[[Category:COSMOS sites with unknown locator method]]</includeonly>
+ | Jakela Plantation                            = Unknown <includeonly>[[Category:COSMOS sites with unknown locator method]]</includeonly>
+ | Rogue Drone Blockage                         = Unknown <includeonly>[[Category:COSMOS sites with unknown locator method]]</includeonly>
+ | Bazeri Palen                                 = Unknown <includeonly>[[Category:COSMOS sites with unknown locator method]]</includeonly>
+ | ST 60 Hideout                                = Unknown <includeonly>[[Category:COSMOS sites with unknown locator method]]</includeonly>
+ | #default = Unknown <includeonly>[[Category:Unknown combat sites]]</includeonly>
+}} }} }} }} }}
+{{#switch: {{{sitetype|}}}
+ | Combat Anomaly = <includeonly>[[Category:Combat anomalies]]</includeonly>
+ | Unrated Complex = <includeonly>[[Category:Unrated Complexes]]</includeonly>
+ | DED Rated Complex = <includeonly>[[Category:DED Complexes]]</includeonly>
+ | Expedition = <includeonly>[[Category:Expeditions]]</includeonly>
+ | Chemical Lab = <includeonly>[[Category:Chemical Labs]]</includeonly>
+ | COSMOS = <includeonly>[[Category:COSMOS sites]]</includeonly>
+ | #default = <includeonly>[[Category:Uncategorized combat sites]]</includeonly> }}
+|}
