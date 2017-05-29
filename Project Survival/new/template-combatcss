@@ -1,0 +1,45 @@
+{{#css:
+table.headers_left tr th {text-align: left; }
+table.complex {font-size: 0.9em; line-height: 1.1em; padding-bottom: 0;}
+table.complex caption {padding: 0.25em; text-align:left; }
+table.complex tr th {background-color: #222; padding: 0.35em;}
+table.complex tr td {padding: 0.25em; }
+table.complex tr td.icon {text-align: center; padding: 0; }
+h4, h5, h6 {line-height: 1; padding-top: 0; padding-bottom: 0;}
+
+@keyframes flashy { 50% { opacity: 0; } }
+@-webkit-keyframes flashy { 50% { opacity: 0; } }
+@-moz-keyframes flashy { 50% { opacity: 0; } }
+@-o-keyframes flashy { 50% { opacity: 0; } }
+.flashy img {
+    animation-name: flashy;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: flashy;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-name: flashy;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -o-animation-name: flashy;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: alternate;
+}
+.wikitable.NPC .head-first {min-width: 360px; }
+.wikitable.NPC .head th p {display: none; }
+.wikitable.NPC caption {text-align:left; margin-left: 0.5em; }
+.wikitable.NPC th {background-color: #222; padding: 0.5em 0.5em 0.4em; }
+.wikitable.NPC td {padding: 0.65em 0.5em 0.5em; line-height: 1; }
+.wikitable.NPC td.icon {padding: 0.1em; text-align: center; width: 24px; white-space: nowrap; }
+.wikitable.NPC td.icon a {padding: 0 0.2em; }
+.wikitable.NPC td.icon a img {margin: -6px; }
+.wikitable.NPC .mw-collapsible-toggle {position: absolute; left: 10px; }
+}}
